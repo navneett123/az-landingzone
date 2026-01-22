@@ -11,7 +11,7 @@ data "azurerm_resource_group" "rg-tf-dev" {
 module "storage_account" {
   source = "../../modules/storage-account"
 
-  name                 = var.storage_account_name
+  storage_account_name = var.storage_account_name
   resource_group_name  = var.resource_group_name
   location             = var.location
   tags                 = var.tags
