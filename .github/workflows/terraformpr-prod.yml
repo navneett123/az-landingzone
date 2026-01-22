@@ -1,8 +1,8 @@
-name: Terraform PR
+name: Terraform PR - Prod
 
 on:
   pull_request:
-    branches: [dev]
+    branches: [master]
 
 permissions:
   contents: read
@@ -11,15 +11,21 @@ permissions:
 jobs:
   plan:
     runs-on: ubuntu-latest
+    environment: prod
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
       - uses: hashicorp/setup-terraform@v3
+
       - run: terraform init -backend-config=backend.hcl
-        working-directory: infra/env/dev
+        working-directory: infra/env/prod
+
       - run: terraform plan
-        working-directory: infra/env/dev
+        working-directory: infra/env/prod
