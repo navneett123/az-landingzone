@@ -22,5 +22,5 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
       - run: terraform init -backend-config=backend.hcl
         working-directory: infra/env/dev
-      - run: terraform plan
+      - run: terraform plan -lock=false
         working-directory: infra/env/dev
