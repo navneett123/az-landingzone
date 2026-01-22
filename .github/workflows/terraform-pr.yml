@@ -12,6 +12,13 @@ jobs:
   plan:
     runs-on: ubuntu-latest
     environment: dev
+    
+    env:
+      ARM_USE_ODC: true
+      ARM_CLIENT_ID: ${{secrets.AZURE_CLIENT_ID}}
+      ARM_TENANT_ID: ${{secrets.AZURE_TENANT_ID}}
+      ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_TENANT_ID}}
+
     steps:
       - uses: actions/checkout@v4
       - uses: azure/login@v2
