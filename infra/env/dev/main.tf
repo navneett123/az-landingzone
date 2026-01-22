@@ -1,18 +1,15 @@
 
-provider "azurerm" {
-  features {}
+data "azurerm_resource_group" "rg-tf-dev" {
+  name = var.resource_group_name
 }
 
-module "rg" {
-  source   = "../../modules/resource-group"
-  name     = "rg-landingzone-dev"
-  location = var.location
+
+module "storage_account" {
+  source = "../../modules/storage-account"
+
+  storage_account_name = var.storage_account_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+  tags                 = var.tags
 }
 
-module "vnet" {
-  source              = "../../modules/vnet"
-  name                = "vnet-dev"
-  location            = var.location
-  resource_group_name = module.rg.name
-  address_space       = ["10.0.0.0/16"]
-}
