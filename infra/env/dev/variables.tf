@@ -25,5 +25,5 @@ variable "subscription_id" {
 }
 
 variable "storage_account_name" {
-  type        = string
+  type = string
 }
