@@ -9,7 +9,7 @@ data "azurerm_resource_group" "rg-tf-dev" {
 
 
 
-esource "azurerm_storage_account" "sa" {
+resource "azurerm_storage_account" "sa" {
   name                = var.storage_account_name
   resource_group_name = data.azurerm_resource_group.rg-tf-dev.name
   location            = var.location
