@@ -36,3 +36,11 @@ variable "vnet_name" {
 variable "address_space" {
   type = list(string)
 }
+
+variable "subnet_name" {
+  type = string
+}
+
+variable "address_prefixes" {
+  type = list(string)
+}
