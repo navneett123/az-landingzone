@@ -13,3 +13,13 @@ module "storage_account" {
   tags                 = var.tags
 }
 
+
+module "virutal_network" {
+ 
+ source = "../../modules/vnet"
+ name = var.vnet_name
+ resource = var.resource_group_name
+ location = var.location
+ address_space = var.address_space
+
+}
