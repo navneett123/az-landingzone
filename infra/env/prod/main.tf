@@ -15,3 +15,5 @@ module "vnet" {
   resource_group_name = module.rg.name
   address_space       = ["10.1.0.0/16"]
 }
+
+
