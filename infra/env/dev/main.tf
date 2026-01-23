@@ -15,11 +15,11 @@ module "storage_account" {
 
 
 module "virutal_network" {
- 
- source = "../../modules/vnet"
- name = var.vnet_name
- resource_group_name = var.resource_group_name
- location = var.location
- address_space = var.address_space
+
+  source              = "../../modules/vnet"
+  name                = var.vnet_name
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  address_space       = var.address_space
 
 }
