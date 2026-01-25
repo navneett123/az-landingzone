@@ -26,7 +26,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
     azurerm_network_interface.nic.id
   ]
 
-
+disable_password_authentication = false
+admin_password                  = var.admin_password
 
   os_disk {
     caching              = "ReadWrite"
