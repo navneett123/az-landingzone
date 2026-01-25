@@ -37,7 +37,7 @@ admin_password                  = var.admin_password
   source_image_reference {
     publisher = "Canonical"
     offer     = "0001-com-ubuntu-server-focal"
-    sku       = "20_04-lts"
+    sku       = "22_04-lts-gen2"
     version   = "latest"
   }
 }
