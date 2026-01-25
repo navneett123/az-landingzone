@@ -35,7 +35,7 @@ module "subnet" {
 
 
 module "nsg" {
-  source              = "../../modules/network-security-group"
+  source              = "../../modules/nsg"
   name                = "${var.vm_name}-nsg"
   location            = var.location
   resource_group_name = data.azurerm_resource_group.rg_tf_dev.name
@@ -44,7 +44,7 @@ module "nsg" {
 
 
 module "public_ip" {
-  source              = "../../modules/public-ip"
+  source              = "../../modules/pip"
   name                = "${var.vm_name}-pip"
   location            = var.location
   resource_group_name = data.azurerm_resource_group.rg_tf_dev.name
