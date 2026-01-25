@@ -46,14 +46,14 @@ variable "address_prefixes" {
 }
 
 
-variable vm_name {
+variable "vm_name" {
   type = string
 }
 
-variable admin_username{
-  type  = string
+variable "admin_username" {
+  type = string
 }
 
-variable "ssh_public_key_path"{
-  type  = string
+variable "ssh_public_key_path" {
+  type = string
 }

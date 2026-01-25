@@ -52,7 +52,7 @@ module "public_ip" {
 
 
 module "vm" {
-  source              = "../../modules/vm-linux"
+  source = "../../modules/vm-linux"
 
   name                = var.vm_name
   location            = var.location
