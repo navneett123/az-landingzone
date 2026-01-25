@@ -18,9 +18,6 @@ variable "admin_username" {
   type = string
 }
 
-variable "ssh_public_key" {
-  type = string
-}
 
 variable "public_ip_id" {
   type = string
