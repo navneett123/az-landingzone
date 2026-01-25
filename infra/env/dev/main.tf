@@ -59,9 +59,8 @@ module "vm" {
   resource_group_name = data.azurerm_resource_group.rg_tf_dev.name
   subnet_id           = module.subnet.id
 
-  admin_username = var.admin_username
-  ssh_public_key = file(pathexpand(var.ssh_public_key_path))
+  admin_username      = var.admin_username
 
-  public_ip_id = module.public_ip.id
-  nsg_id       = module.nsg.id
+  public_ip_id        = module.public_ip.id
+  nsg_id              = module.nsg.id
 }
