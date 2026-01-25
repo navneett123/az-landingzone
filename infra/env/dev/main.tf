@@ -60,6 +60,7 @@ module "vm" {
   subnet_id           = module.subnet.id
 
   admin_username      = var.admin_username
+  admin_password      = var.admin_password
 
   public_ip_id        = module.public_ip.id
   nsg_id              = module.nsg.id
