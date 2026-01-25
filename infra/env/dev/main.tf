@@ -8,7 +8,7 @@ module "storage_account" {
   source = "../../modules/storage-account"
 
   storage_account_name = var.storage_account_name
-  resource_group_name  = data.azurerm_network_security_group.rg_tf_dev.name
+  resource_group_name  = data.azurerm_resouce_group.rg_tf_dev.name
   location             = var.location
   tags                 = var.tags
 }
