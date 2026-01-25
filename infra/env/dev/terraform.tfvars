@@ -9,6 +9,7 @@ address_prefixes     = ["10.25.2.0/26"]
 subnet_name          = "sb-dev-tfm"
 vm_name              = "my-testvm-tfm"
 admin_username       = "azadmin"
+admin_password       = "Welcome@202627"
 tags = {
   environment = "dev"
   owner       = "navneet"
