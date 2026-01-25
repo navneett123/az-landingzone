@@ -44,3 +44,16 @@ variable "subnet_name" {
 variable "address_prefixes" {
   type = list(string)
 }
+
+
+variable vm_name {
+  type = string
+}
+
+variable admin_username{
+  type  = string
+}
+
+variable "ssh_public_key_path"{
+  type  = string
+}
